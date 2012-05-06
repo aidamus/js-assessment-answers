@@ -9,14 +9,24 @@ define([ 'use!underscore' ], function(_) {
       // if the number is divisible the 3 and 5, the function should return
       // 'fizzbuzz';
       // otherwise the function should return the number
+      if( num % 5 === 0 ) {
+        if( num % 3 === 0 ) {
+          return 'fizzbuzz';
+        }
+        return 'buzz';
+      } else if ( num % 3 === 0 ) {
+        return 'fizz';
+      }
+
+      return num;
     },
 
     or : function(a, b) {
-
+      return a||b;
     },
 
     and : function(a, b) {
-
+      return a && b; 
     }
   };
 });
